@@ -38,7 +38,8 @@ public class JsonJob2 {
                 .<CoinMarket, CoinMarket>chunk(chunkSize)
                 .reader(jsonJob2_jsonReader())
                 .processor(jsonJob2_processor())
-                .writer(jsonJob2_jsonWriter()).build();
+                .writer(jsonJob2_jsonWriter())
+                .build();
     }
 
     private ItemProcessor<CoinMarket, CoinMarket> jsonJob2_processor() {

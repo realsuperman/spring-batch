@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/batchRun.sh
 
 #
 # Copyright © 2015-2021 the original authors.
@@ -22,7 +22,7 @@
 #
 #   Important for running:
 #
-#   (1) You need a POSIX-compliant shell to run this script. If your /bin/sh is
+#   (1) You need a POSIX-compliant shell to run this script. If your /bin/batchRun.sh is
 #       noncompliant, but you have some other compliant shell such as ksh or
 #       bash, then to run this script, type that shell name before the whole
 #       command line, like:
@@ -118,7 +118,7 @@ CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
 if [ -n "$JAVA_HOME" ] ; then
     if [ -x "$JAVA_HOME/jre/sh/java" ] ; then
         # IBM's JDK on AIX uses strange locations for the executables
-        JAVACMD=$JAVA_HOME/jre/sh/java
+        JAVACMD=$JAVA_HOME/jre/batchRun.sh/java
     else
         JAVACMD=$JAVA_HOME/bin/java
     fi
@@ -143,7 +143,7 @@ fi
 if ! "$cygwin" && ! "$darwin" && ! "$nonstop" ; then
     case $MAX_FD in #(
       max*)
-        # In POSIX sh, ulimit -H is undefined. That's why the result is checked to see if it worked.
+        # In POSIX batchRun.sh, ulimit -H is undefined. That's why the result is checked to see if it worked.
         # shellcheck disable=SC3045
         MAX_FD=$( ulimit -H -n ) ||
             warn "Could not query maximum file descriptor limit"
@@ -151,7 +151,7 @@ if ! "$cygwin" && ! "$darwin" && ! "$nonstop" ; then
     case $MAX_FD in  #(
       '' | soft) :;; #(
       *)
-        # In POSIX sh, ulimit -n is undefined. That's why the result is checked to see if it worked.
+        # In POSIX batchRun.sh, ulimit -n is undefined. That's why the result is checked to see if it worked.
         # shellcheck disable=SC3045
         ulimit -n "$MAX_FD" ||
             warn "Could not set maximum file descriptor limit to $MAX_FD"
@@ -173,7 +173,7 @@ if "$cygwin" || "$msys" ; then
 
     JAVACMD=$( cygpath --unix "$JAVACMD" )
 
-    # Now convert the arguments - kludge to limit ourselves to /bin/sh
+    # Now convert the arguments - kludge to limit ourselves to /bin/batchRun.sh
     for arg do
         if
             case $arg in                                #(

@@ -46,13 +46,13 @@
 //    public FlatFileItemReader<TwoDto> fixedLengthJob2_FileReader(){
 //        FlatFileItemReader<TwoDto> flatFileItemReader = new FlatFileItemReader<>();
 //        flatFileItemReader.setResource(new ClassPathResource("/sample/fixedLengthJob2_input.txt"));
-//        flatFileItemReader.setLinesToSkip(1); // csv의 첫 라인은 헤더이므로 해당 라인은 패스
+//        flatFileItemReader.setLinesToSkip(1.txt); // csv의 첫 라인은 헤더이므로 해당 라인은 패스
 //
 //        DefaultLineMapper<TwoDto> dtoDefaultLineMapper = new DefaultLineMapper<>();
 //
 //        FixedLengthTokenizer fixedLengthTokenizer = new FixedLengthTokenizer();
 //        fixedLengthTokenizer.setNames("one","two");
-//        fixedLengthTokenizer.setColumns(new Range(1,5), new Range(6,10));
+//        fixedLengthTokenizer.setColumns(new Range(1.txt,5), new Range(6,10));
 //
 //        BeanWrapperFieldSetMapper<TwoDto> beanWrapperFieldSetMapper = new BeanWrapperFieldSetMapper<>(); // 타입 관련
 //        beanWrapperFieldSetMapper.setTargetType(TwoDto.class); // 해당 클래스 타입으로 만들어라
